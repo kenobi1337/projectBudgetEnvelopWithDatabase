@@ -18,8 +18,10 @@ app.use(helmet());
 app.use(compression())
 
 const people_router = require('./people_back_end/people_route');
-
 app.use('/people', people_router);
+
+const budget_router = require('./budget_back_end/budget_route');
+app.use('/budget', budget_router);
 
 app.get('/', (req, res) => {
     res.send('server is working');

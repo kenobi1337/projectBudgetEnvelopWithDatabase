@@ -41,13 +41,13 @@ const createNewPerson = (req, res) => {
         if(err) {
             throw err;
         }
-        res.send('you have successful created new person record');
+        res.status(201).send('you have successful created new person record');
     })
 }
 
 const deletePerson = (req, res) => {
     pool.query('DELETE people WHERE id = $1', [req.id], (err, results) => {
-        res.send(`you have deleted person with id:${req.id}`);
+        res.status(204).send(`you have deleted person with id:${req.id}`);
     })
 }
 
