@@ -26,6 +26,9 @@ app.use('/budget', budget_router);
 const address_router = require('./address_back_end/address_route');
 app.use('/address', address_router);
 
+const transaction_router = require('./transaction_back_end/transaction_route');
+app.use('/transaction', transaction_router);
+
 app.get('/', (req, res) => {
     res.send('server is working');
 })
