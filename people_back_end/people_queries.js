@@ -1,4 +1,4 @@
-const pool = require('./configure_sql');
+const pool = require('../configure_sql');
 
 const idParams = (req, res, next, ID) => {
     req.id = req.params.id;

@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
 app.use(helmet());
 app.use(compression())
 
-const people_router = require('./people_route');
+const people_router = require('./people_back_end/people_route');
 
 app.use('/people', people_router);
 
