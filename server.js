@@ -23,6 +23,9 @@ app.use('/people', people_router);
 const budget_router = require('./budget_back_end/budget_route');
 app.use('/budget', budget_router);
 
+const address_router = require('./address_back_end/address_route');
+app.use('/address', address_router);
+
 app.get('/', (req, res) => {
     res.send('server is working');
 })
