@@ -34,11 +34,11 @@ const updateAddress = (req, res) => {
     const {street_number, street_name, suit_type, number_suit, zip_code, person_id} = req.body;
     const id = req.params.id;
     pool.query('UPDATE address SET street_number = $1, street_name = $2, suit_type = $3, number_suit = $4, zip_code = $5 WHERE person_id = $6',
-    [street_number, street_name, suit_type, number_suit, zip_code, person_id], (err, results) => {
+    [street_number, street_name, suit_type, number_suit, zip_code, id], (err, results) => {
         if (err) {
             throw err;
         }
-        res.send(`you have updated address for person with id:${person_id}`);
+        res.send(`you have updated address for person with id:${id}`);
     })
 }
 

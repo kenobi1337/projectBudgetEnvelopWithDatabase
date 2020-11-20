@@ -20,11 +20,11 @@ const getSingleBudget = (req, res) => {
 }
 
 const createBudget = (req, res) => {
-    const {name, budget, id} = req.body;
+    const {name, budget, personId} = req.body;
     pool.query('INSERT INTO budget (name, budget, person_id)' +
     'VALUES ($1, $2, $3)', 
-    [name, budget, id], (err, results) => {
-        res.status(201).send(`you created new budget with an Id:${id}`);
+    [name, budget, personId], (err, results) => {
+        res.status(201).send(`you created new budget `);
     })
 }
 
