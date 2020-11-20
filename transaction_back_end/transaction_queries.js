@@ -40,7 +40,7 @@ const updateTransaction = (req, res) => {
 
 const deleteTransaction = (req, res) => {
     const id = req.params.id;
-    pool.query('DELETE transaction WHERE id = $1', [id], (err, results) => {
+    pool.query('DELETE FROM transaction WHERE id = $1', [id], (err, results) => {
         res.send(`you have deleted transaction record with id${id}`);
     })
 }
