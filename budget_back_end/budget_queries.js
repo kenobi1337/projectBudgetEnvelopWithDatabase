@@ -38,7 +38,7 @@ const updateBudget = (req, res) => {
 
 const deleteBudget = (req, res) => {
     const id = req.params.id;
-    pool.query('DELETE budget WHERE id = $1', [id], (err, results) => {
+    pool.query('DELETE FROM budget WHERE id = $1', [id], (err, results) => {
         res.status(204).send(`you have deleted budget with id:${id}`);
     })
 }

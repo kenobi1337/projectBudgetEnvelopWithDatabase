@@ -46,8 +46,8 @@ const createNewPerson = (req, res) => {
 }
 
 const deletePerson = (req, res) => {
-    pool.query('DELETE people WHERE id = $1', [req.id], (err, results) => {
-        res.status(204).send(`you have deleted person with id:${req.id}`);
+    pool.query('DELETE FROM people WHERE id = $1', [req.params.id], (err, results) => {
+        res.status(204).send(`you have deleted person with id:${req.params.id}`);
     })
 }
 

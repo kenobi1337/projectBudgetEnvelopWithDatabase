@@ -44,7 +44,7 @@ const updateAddress = (req, res) => {
 
 const deleteAddress = (req, res) => {
     const id = req.params.id;
-    pool.query('DELETE address WHERE id = $1', [id], (err, results) => {
+    pool.query('DELETE FROM address WHERE id = $1', [id], (err, results) => {
         res.send(`you have deleted address with id:${id}`);
     })
 }
