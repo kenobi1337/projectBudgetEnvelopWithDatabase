@@ -9,7 +9,7 @@ const swaggerOption = {
             version: '1.0.0',
             description: 'this is the project for practice'
         },
-        host: 'localhost:4001',
+        host: 'https://budget-envelop-by-chanathip.herokuapp.com',
         basePath: '/'
     },
     apis: ['./server.js']
